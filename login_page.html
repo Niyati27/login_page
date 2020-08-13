@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>transparant login Page</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script>
+			function myfun(){
+				var a=document.getElementById("user");
+				var b=document.getElementById("password");
+
+				if(a.value==""){
+					document.getElementById("message2").innerHTML="*enter username*";
+					a.focus();
+					return false;
+				}
+				if(b.value==""){
+					document.getElementById("message2").innerHTML="*enter password*";
+					b.focus();
+					return false;
+				}
+				if(a.value!=b.value){
+					document.getElementById("message2").innerHTML="*enter valid username or password*";
+					return false;
+				}
+				if(a.value!="admin"){
+					document.getElementById("message2").innerHTML="*enter valid user name or password*";
+					return false;
+				}
+				else{
+					window.open("home.html");
+				}
+			}
+		</script>
+		<form onsubmit="return myfun()">
+		<div class="login-box">
+			<h1>Login</h1>
+			<div class="textbox">
+				<i class="fa fa-user"></i>
+				<input type="text" id="user" placeholder="Username" value="">
+ 			</div>
+ 			<div class="textbox">
+ 				<i class="fa fa-lock"></i>
+				<input type="Password" id="password" placeholder="Password" value="">
+ 			</div>
+ 			<span id="message2" style="color:red; font-size: 10px;"></span>
+ 			<div class="btn">
+ 				<input type="submit" value="sign-in">
+ 			</div>
+ 		</div></form>
+	</body>
+</html>
