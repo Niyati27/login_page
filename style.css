@@ -50,3 +50,13 @@ body{
 	font-family:sans-serif;
 	margin-top: 200px;
 }
+@media screen and (min-width:992px){
+	.login-box{
+		transform: translate(70%,-50%);
+	}
+}
+@media screen and (min-width:1200px){
+	.login-box{
+		transform: translate(100%,-50%);
+	}
+}
